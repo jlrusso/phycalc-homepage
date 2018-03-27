@@ -26,7 +26,7 @@
 					<div id="vertical-search-btn"><i class="glyphicon glyphicon-search"></i></div>
 					<div id="click-box"></div>
 					<span id="hamburger-menu"></span>
-					<div class="vertical-nav">
+					<div id="vertical-nav" class="vertical-nav">
 						<ul>
 							<li><a href="#" id="vert-contact-btn">Contact</a></li>
 							<li><a href="#" id="vert-calculator-btn">Calculator</a></li>
@@ -39,7 +39,7 @@
 
 		<div id="search-container">
 			<div id="search-form">
-				<input type="text" id="search-bar"/>
+				<input type="text" id="search-bar" placeholder="Search"/>
 				<div id="search-btn"><i class="glyphicon glyphicon-search"></i></div>
 			</div>
 			<div id="close-search-btn">
@@ -146,25 +146,6 @@
 					</a>
 				</div>
 				<div class="col-md-3">
-					<a href="kinematicsBigFive.html">
-						<div class="card">
-							<div class="button-to-page">View Topic</div>
-							<img src="../img/home-motion-2d.png" class="img-responsive">
-							<div class="caption text-center">
-								<h4>Kinematics: Big 5</h4>
-								<div class="line-divider"></div>
-								<ul>
-									<li>Velocity</li>
-									<li>Time &amp; Acceleration</li>
-									<li>Position</li>
-								</ul>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-			<div class="row card-row">
-				<div class="col-md-3">
 					<a href="acceleration.html">
 						<div class="card">
 							<div class="button-to-page">View Topic</div>
@@ -176,6 +157,25 @@
 									<li>&Delta;Velocity</li>
 									<li>Gravity</li>
 									<li>Slowing v. Speeding</li>
+								</ul>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="row card-row">
+				<div class="col-md-3">
+					<a href="kinematicsBigFive.html">
+						<div class="card">
+							<div class="button-to-page">View Topic</div>
+							<img src="../img/home-motion-2d.png" class="img-responsive">
+							<div class="caption text-center">
+								<h4>Kinematics: Big 5</h4>
+								<div class="line-divider"></div>
+								<ul>
+									<li>Velocity</li>
+									<li>Time &amp; Acceleration</li>
+									<li>Position</li>
 								</ul>
 							</div>
 						</div>
