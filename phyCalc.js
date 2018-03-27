@@ -4,7 +4,7 @@ $(window).on('beforeunload', function() {
 
 
 window.onload = function(){
-var navBar = document.getElementsByTagName("nav")[0],
+	var navBar = document.getElementsByTagName("nav")[0],
 		horizontalSearchBtn = document.getElementById("horizontal-search-btn"),
 		verticalSearchBtn = document.getElementById("vertical-search-btn"),
 		searchContainer  = document.getElementById("search-container"),
@@ -38,8 +38,6 @@ var navBar = document.getElementsByTagName("nav")[0],
 			searchBar.value  = "";
 		}
 	}
-
-
 	function showList() {
 		if (searchBar.value.length > 0){
 			caseList.classList.add('show');
@@ -48,7 +46,6 @@ var navBar = document.getElementsByTagName("nav")[0],
 			caseList.classList.remove('show');
 		}
 	}
-
 	function showAnchors(){
 		let inputValue = searchBar.value.toUpperCase();
 		let anchors = caseList.getElementsByTagName('a');
@@ -70,13 +67,11 @@ var navBar = document.getElementsByTagName("nav")[0],
 			}
 		})
 	}
-
 	/*--- Toggle Hamburger Menu ---*/
 	var icon = document.getElementById("icon");
 	var clickBox = document.getElementById("click-box");
 	var verticalNav = document.getElementsByClassName("vertical-nav")[0];
 	clickBox.addEventListener("click", toggleVerticalNav, false);
-
 	function toggleVerticalNav(e){
 		icon.classList.toggle("active");
 		verticalNav.classList.toggle("show-vertical-nav");
@@ -93,13 +88,12 @@ var navBar = document.getElementsByTagName("nav")[0],
 	}
 }; //closing bracket for onload function
 
-
 /*--- Scroll to page section on click ---*/
 $(document).ready(function(){
 	$("#get-started-btn").click(function() {
-	    $('html,body').animate({
-	        scrollTop: $("#featured-topic-heading").offset().top - 10
-	        }, 'slow'); //scroll from top to selector
+    $('html,body').animate({
+        scrollTop: $("#featured-topic-heading").offset().top - 10
+    }, 'slow'); //scroll from top to selector
 	});
 
 	$("#contact-btn").click(function(){
@@ -153,11 +147,6 @@ $(document).ready(function(){
 	})
 
 });
-/*--- end of scroll to page section ---*/
-
-
-
-
 /*--- Conversion Table JS ---*/
 var userInput = document.getElementById('unit-input-field');
 var unitOutput = document.getElementById('unit-output-field');
