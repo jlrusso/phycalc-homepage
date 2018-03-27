@@ -199,7 +199,7 @@
 					</a>
 				</div>
 				<div class="col-md-3">
-					<a href="oneDimensionalForces.html">
+					<a href="forces.html">
 						<div class="card">
 							<div class="button-to-page">View Topic</div>
 							<img src="../img/home-force.png" class="img-responsive">
