@@ -772,11 +772,11 @@ nav {
 	color: #F1C40F;
 }
 #calculator-tooltip {
+	display: none;
 	position:absolute;
 	bottom:10px;
 	left:50%;
 	transform:translateX(-50%);
-	opacity: 0;
 	text-align: center;
 	transition: 0.3s;
 	width: 200px;
