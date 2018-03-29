@@ -1,93 +1,6 @@
 $(window).on('beforeunload', function() {
 	 $(window).scrollTop(0);
 });
-
-
-window.onload = function(){
-	var navBar = document.getElementsByTagName("nav")[0],
-		horizontalSearchBtn = document.getElementById("horizontal-search-btn"),
-		verticalSearchBtn = document.getElementById("vertical-search-btn"),
-		searchContainer  = document.getElementById("search-container"),
-		searchBar = document.getElementById("search-bar"),
-		closeSearchBtn = document.getElementById("close-search-btn"),
-		caseList = document.getElementById("search-case-list"),
-		banner = document.getElementsByClassName("banner")[0],
-		hiwSection = document.getElementsByClassName("how-it-works-section")[0],
-		mainContent = document.getElementById("main-content");
-
-	horizontalSearchBtn.addEventListener("click", openSearchContainer);
-	verticalSearchBtn.addEventListener("click", openSearchContainer);
-	searchBar.addEventListener("input", showList);
-	closeSearchBtn.addEventListener("click", closeSearchContainer);
-
-	function openSearchContainer(){
-		if(!searchContainer.classList.contains("active-search")){
-			searchContainer.classList.toggle("active-search");
-			searchBar.focus();
-		} else {
-			searchContainer.classList.remove("active-search");
-			caseList.classList.remove("show");
-			searchBar.value = "";
-		}
-	}
-
-	function closeSearchContainer(){
-		if(searchContainer.classList.contains("active-search")){
-			searchContainer.classList.remove("active-search");
-			caseList.classList.remove("show");
-			searchBar.value  = "";
-		}
-	}
-	function showList() {
-		if (searchBar.value.length > 0){
-			caseList.classList.add('show');
-			showAnchors();
-		} else {
-			caseList.classList.remove('show');
-		}
-	}
-	function showAnchors(){
-		let inputValue = searchBar.value.toUpperCase();
-		let anchors = caseList.getElementsByTagName('a');
-		let newAnchors = document.createElement("a");
-		for (var i = 0; i < anchors.length; i++){
-			let a = anchors[i];
-			if (a.textContent.toUpperCase().indexOf(inputValue) > -1){
-				anchors[i].style.display = "";
-			} else {
-				anchors[i].style.display = "none";
-			}
-		}
-	}
-	var searchClosers = [searchContainer, banner, hiwSection, mainContent];
-	for(let i = 0; i < searchClosers.length; i++){
-		searchClosers[i].addEventListener("click", function(e){
-			if(!e.target.matches("#search-bar")){
-				closeSearchContainer();
-			}
-		})
-	}
-	/*--- Toggle Hamburger Menu ---*/
-	var icon = document.getElementById("icon");
-	var clickBox = document.getElementById("click-box");
-	var verticalNav = document.getElementsByClassName("vertical-nav")[0];
-	clickBox.addEventListener("click", toggleVerticalNav, false);
-	function toggleVerticalNav(e){
-		icon.classList.toggle("active");
-		verticalNav.classList.toggle("show-vertical-nav");
-	}
-	window.onclick = function(e){
-		if(window.innerWidth < 650){
-			if(!e.target.matches("#click-box")){
-				if(icon.classList.contains("active")){
-					icon.classList.remove("active");
-					verticalNav.classList.remove("show-vertical-nav");
-				}
-			}
-		}
-	}
-}; //closing bracket for onload function
-
 /*--- Scroll to page section on click ---*/
 $(document).ready(function(){
 	$("#get-started-btn").click(function() {
@@ -147,10 +60,97 @@ $(document).ready(function(){
 	})
 
 });
+
+var navBar = document.getElementsByTagName("nav")[0],
+		horizontalSearchBtn = document.getElementById("horizontal-search-btn"),
+		verticalSearchBtn = document.getElementById("vertical-search-btn"),
+		searchContainer  = document.getElementById("search-container"),
+		searchBar = document.getElementById("search-bar"),
+		closeSearchBtn = document.getElementById("close-search-btn"),
+		caseList = document.getElementById("search-case-list"),
+		banner = document.getElementsByClassName("banner")[0],
+		hiwSection = document.getElementsByClassName("how-it-works-section")[0],
+		mainContent = document.getElementById("main-content");
+
+horizontalSearchBtn.addEventListener("click", openSearchContainer);
+verticalSearchBtn.addEventListener("click", openSearchContainer);
+searchBar.addEventListener("input", showList);
+closeSearchBtn.addEventListener("click", closeSearchContainer);
+
+function openSearchContainer(){
+	if(!searchContainer.classList.contains("active-search")){
+		searchContainer.classList.toggle("active-search");
+		searchBar.focus();
+	} else {
+		searchContainer.classList.remove("active-search");
+		caseList.classList.remove("show");
+		searchBar.value = "";
+	}
+}
+
+function closeSearchContainer(){
+	if(searchContainer.classList.contains("active-search")){
+		searchContainer.classList.remove("active-search");
+		caseList.classList.remove("show");
+		searchBar.value  = "";
+	}
+}
+function showList() {
+	if (searchBar.value.length > 0){
+		caseList.classList.add('show');
+		showAnchors();
+	} else {
+		caseList.classList.remove('show');
+	}
+}
+function showAnchors(){
+	let inputValue = searchBar.value.toUpperCase();
+	let anchors = caseList.getElementsByTagName('a');
+	let newAnchors = document.createElement("a");
+	for (var i = 0; i < anchors.length; i++){
+		let a = anchors[i];
+		if (a.textContent.toUpperCase().indexOf(inputValue) > -1){
+			anchors[i].style.display = "";
+		} else {
+			anchors[i].style.display = "none";
+		}
+	}
+}
+
+var searchClosers = [searchContainer, banner, hiwSection, mainContent];
+for(let i = 0; i < searchClosers.length; i++){
+	searchClosers[i].addEventListener("click", function(e){
+		if(!e.target.matches("#search-bar")){
+			closeSearchContainer();
+		}
+	})
+}
+
+/*--- Toggle Hamburger Menu ---*/
+var icon = document.getElementById("icon");
+var clickBox = document.getElementById("click-box");
+var verticalNav = document.getElementsByClassName("vertical-nav")[0];
+
+clickBox.addEventListener("click", function(){
+	icon.classList.toggle("active");
+	verticalNav.classList.toggle("show-vertical-nav");
+})
+
+window.onclick = function(e){
+	if(window.innerWidth < 650){
+		if(!e.target.matches("#click-box")){
+			if(icon.classList.contains("active")){
+				icon.classList.remove("active");
+				verticalNav.classList.remove("show-vertical-nav");
+			}
+		}
+	}
+}
+
 /*--- Conversion Table JS ---*/
-var userInput = document.getElementById('unit-input-field');
-var unitOutput = document.getElementById('unit-output-field');
-var unitC = document.getElementById('unit-converter');
+var userInput = document.getElementById('unit-input-field'),
+    unitOutput = document.getElementById('unit-output-field'),
+		unitC = document.getElementById('unit-converter');
 
 if(userInput){
 	userInput.addEventListener('input', convertUnit);
@@ -159,14 +159,12 @@ if(unitC){
 	unitC.addEventListener('change', convertUnit);
 }
 
-function convertUnit()
-{
+function convertUnit() {
 	if (userInput.value < 0){
 		alert("Please enter a value greater or equal to zero");
 		userInput.value = "";
 	} else {
-		switch(true)
-		{
+		switch(true) {
 			case document.getElementById('millimetersToCentimeters').selected:
 				unitOutput.value = (userInput.value / 10) + " cm";
 				break;
