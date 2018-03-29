@@ -212,7 +212,7 @@
 			</div>
 			<div class="row card-row">
 				<div class="col-md-3">
-					<a href="kinematicsBigFive.html">
+					<a href="kinematics.html">
 						<div class="card">
 							<div class="button-to-page">View Topic</div>
 							<img src="../img/home-motion-2d.png" class="img-responsive">
