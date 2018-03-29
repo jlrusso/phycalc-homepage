@@ -398,7 +398,7 @@
 						<button type="button" id="delete-btn">Del</button>
 					</div>
 					<div class="col-fourth">
-						<input type="number" id="sig-fig-field" placeholder="sigfigs"/>
+						<input type="number" id="sig-fig-field" placeholder="SD#"/>
 					</div>
 				</div>
 			</div>
