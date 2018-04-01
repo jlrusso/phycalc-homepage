@@ -1,12 +1,12 @@
 $(window).on('beforeunload', function() {
 	 $(window).scrollTop(0);
 });
-/*--- Scroll to page section on click ---*/
+
 $(document).ready(function(){
 	$("#get-started-btn").click(function() {
     $('html,body').animate({
         scrollTop: $("#featured-topic-heading").offset().top - 10
-    }, 'slow'); //scroll from top to selector
+    }, 'slow');
 	});
 
 	$("#contact-btn").click(function(){
