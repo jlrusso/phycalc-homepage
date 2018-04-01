@@ -40,7 +40,7 @@
 		<div id="search-container">
 			<div id="search-form">
 				<input type="text" id="search-bar" placeholder="Search"/>
-				<div id="search-btn"><i class="glyphicon glyphicon-search"></i></div>
+				<div id="search-icon"><i class="glyphicon glyphicon-search"></i></div>
 			</div>
 			<div id="close-search-btn">
 				<span id="close-bar-one"></span>
@@ -108,7 +108,7 @@
 
 		<div class="banner">
 			<div id="banner-inner">
-				<p id="banner-heading">Physics problems? Find solutions.</p>
+				<p id="banner-heading">Calculate Solutions for Physics Problems</p>
 				<span id="get-started-btn">Get Started</span>
 			</div>
 		</div>
