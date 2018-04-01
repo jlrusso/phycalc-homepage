@@ -513,7 +513,7 @@ nav {
 	margin-bottom: 15px;
 }
 /*--- Start of Conversion Section ---*/
-#conversion-section {
+#conversion-outer {
 	padding: 45px;
 	background-color: var(--main-black-color);
 }
@@ -965,7 +965,7 @@ nav {
 	.card li {
 		font-size: 1.6rem;
 	}
-	#conversion-section {
+	#conversion-outer {
 		padding: 15px;
 	}
 	#conversion-container {
