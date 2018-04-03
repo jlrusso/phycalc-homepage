@@ -128,7 +128,7 @@
 							<div class="button-to-page">View Topic</div>
 							<img src="../img/home-motion-2d.png" class="img-responsive">
 							<div class="caption text-center">
-								<h4>Kinematics: Big 5</h4>
+								<h4>Kinematics</h4>
 								<div class="line-divider"></div>
 								<ul>
 									<li>Velocity</li>
