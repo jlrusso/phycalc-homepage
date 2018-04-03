@@ -41,7 +41,7 @@ $(document).ready(function(){
 
 	$("#vert-conversion-btn").click(function(){
 		$("html, body").animate({
-			scrollTop: $("#conversion-section").offset().top
+			scrollTop: $("#conversion-container").offset().top
 		}, "slow")
 	})
 
@@ -64,7 +64,7 @@ $(document).ready(function(){
 var navBar = document.getElementsByTagName("nav")[0],
 		horizontalSearchBtn = document.getElementById("horizontal-search-btn"),
 		verticalSearchBtn = document.getElementById("vertical-search-btn"),
-		searchContainer  = document.getElementById("search-container"),
+		searchSection  = document.getElementById("search-section"),
 		searchBar = document.getElementById("search-bar"),
 		closeSearchBtn = document.getElementById("close-search-btn"),
 		caseList = document.getElementById("search-case-list"),
@@ -78,19 +78,19 @@ searchBar.addEventListener("input", showList);
 closeSearchBtn.addEventListener("click", closeSearchContainer);
 
 function openSearchContainer(){
-	if(!searchContainer.classList.contains("active-search")){
-		searchContainer.classList.toggle("active-search");
+	if(!searchSection.classList.contains("active-search")){
+		searchSection.classList.toggle("active-search");
 		searchBar.focus();
 	} else {
-		searchContainer.classList.remove("active-search");
+		searchSection.classList.remove("active-search");
 		caseList.classList.remove("show");
 		searchBar.value = "";
 	}
 }
 
 function closeSearchContainer(){
-	if(searchContainer.classList.contains("active-search")){
-		searchContainer.classList.remove("active-search");
+	if(searchSection.classList.contains("active-search")){
+		searchSection.classList.remove("active-search");
 		caseList.classList.remove("show");
 		searchBar.value  = "";
 	}
@@ -117,7 +117,7 @@ function showAnchors(){
 	}
 }
 
-var searchClosers = [searchContainer, banner, hiwSection, mainContent];
+var searchClosers = [searchSection, banner, hiwSection, mainContent];
 for(let i = 0; i < searchClosers.length; i++){
 	searchClosers[i].addEventListener("click", function(e){
 		if(!e.target.matches("#search-bar")){
