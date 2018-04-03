@@ -53,7 +53,7 @@
 			</div>
 			<div class="row card-row">
 				<div class="col-md-3">
-					<a href="displacement.html">
+					<a href="displacement.php">
 						<div class="card" href="displacement.html">
 							<div class="button-to-page">View Topic</div>
 							<img src="../img/home-displacement.png" class="responsive">
@@ -70,7 +70,7 @@
 					</a>
 				</div>
 				<div class="col-md-3">
-					<a href="vectorDisplacement.html">
+					<a href="vectorDisplacement.php">
 						<div class="card">
 							<div class="button-to-page">View Topic</div>
 							<img src="../img/2d-displacement.png" class="img-responsive">
@@ -87,7 +87,7 @@
 					</a>
 				</div>
 				<div class="col-md-3">
-					<a href="velocity.html">
+					<a href="velocity.php">
 						<div class="card">
 							<div class="button-to-page">View Topic</div>
 							<img src="../img/home-velocity.png" class="img-responsive">
@@ -104,7 +104,7 @@
 					</a>
 				</div>
 				<div class="col-md-3">
-					<a href="acceleration.html">
+					<a href="acceleration.php">
 						<div class="card">
 							<div class="button-to-page">View Topic</div>
 							<img src="../img/home-acceleration.png" class="img-responsive">
@@ -123,7 +123,7 @@
 			</div>
 			<div class="row card-row">
 				<div class="col-md-3">
-					<a href="kinematics.html">
+					<a href="kinematics.php">
 						<div class="card">
 							<div class="button-to-page">View Topic</div>
 							<img src="../img/home-motion-2d.png" class="img-responsive">
@@ -140,7 +140,7 @@
 					</a>
 				</div>
 				<div class="col-md-3">
-					<a href="circularMotion.html">
+					<a href="circularMotion.php">
 						<div class="card">
 							<div class="button-to-page">View Topic</div>
 							<img src="../img/home-circular.png" class="img-responsive">
@@ -157,7 +157,7 @@
 					</a>
 				</div>
 				<div class="col-md-3">
-					<a href="forces.html">
+					<a href="forces.php">
 						<div class="card">
 							<div class="button-to-page">View Topic</div>
 							<img src="../img/home-force.png" class="img-responsive">
@@ -174,7 +174,7 @@
 					</a>
 				</div>
 				<div class="col-md-3">
-					<a href="gravitationalForces.html">
+					<a href="gravitationalForces.php">
 						<div class="card">
 							<div class="button-to-page">View Topic</div>
 							<img src="../img/home-angle-force.png" class="img-responsive">
