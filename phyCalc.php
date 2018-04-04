@@ -27,19 +27,19 @@
 		<div class="how-it-works-section">
 			<div class="row text-center">
 				<div class="col-md-4">
-					<img src="../img/search-icon.png" alt="Search Icon"/>
+					<img src="img/search-icon.png" alt="Search Icon"/>
 					<div class="hiw-caption">
 						<p>Search our database by topic or topic-related terms</p>
 					</div>
 				</div>
 				<div class="col-md-4">
-					<img src="../img/review-icon.png" alt="Review Icon"/>
+					<img src="img/review-icon.png" alt="Review Icon"/>
 					<div class="hiw-caption">
 						<p>Review practice problems and step by step solutions</p>
 					</div>
 				</div>
 				<div class="col-md-4">
-					<img src="../img/solution-icon.png" alt="Solution Icon"/>
+					<img src="img/solution-icon.png" alt="Solution Icon"/>
 					<div class="hiw-caption">
 						<p>Solve your own problems by inputing given variables</p>
 					</div>
@@ -56,7 +56,7 @@
 					<a href="displacement.php">
 						<div class="card" href="displacement.html">
 							<div class="button-to-page">View Topic</div>
-							<img src="../img/home-displacement.png" class="responsive">
+							<img src="img/home-displacement.png" class="responsive">
 							<div class="caption">
 								<h4 class="text-center">Displacement</h4>
 								<div class="line-divider"></div>
@@ -73,7 +73,7 @@
 					<a href="vectorDisplacement.php">
 						<div class="card">
 							<div class="button-to-page">View Topic</div>
-							<img src="../img/2d-displacement.png" class="img-responsive">
+							<img src="img/2d-displacement.png" class="img-responsive">
 							<div class="caption text-center">
 								<h4>2D Displacement</h4>
 								<div class="line-divider"></div>
@@ -90,7 +90,7 @@
 					<a href="velocity.php">
 						<div class="card">
 							<div class="button-to-page">View Topic</div>
-							<img src="../img/home-velocity.png" class="img-responsive">
+							<img src="img/home-velocity.png" class="img-responsive">
 							<div class="caption text-center">
 								<h4>Velocity</h4>
 								<div class="line-divider"></div>
@@ -107,7 +107,7 @@
 					<a href="acceleration.php">
 						<div class="card">
 							<div class="button-to-page">View Topic</div>
-							<img src="../img/home-acceleration.png" class="img-responsive">
+							<img src="img/home-acceleration.png" class="img-responsive">
 							<div class="caption text-center">
 								<h4>Acceleration</h4>
 								<div class="line-divider"></div>
@@ -126,7 +126,7 @@
 					<a href="kinematics.php">
 						<div class="card">
 							<div class="button-to-page">View Topic</div>
-							<img src="../img/home-motion-2d.png" class="img-responsive">
+							<img src="img/home-motion-2d.png" class="img-responsive">
 							<div class="caption text-center">
 								<h4>Kinematics</h4>
 								<div class="line-divider"></div>
@@ -143,7 +143,7 @@
 					<a href="circularMotion.php">
 						<div class="card">
 							<div class="button-to-page">View Topic</div>
-							<img src="../img/home-circular.png" class="img-responsive">
+							<img src="img/home-circular.png" class="img-responsive">
 							<div class="caption text-center">
 								<h4>Circular Motion</h4>
 								<div class="line-divider"></div>
@@ -160,7 +160,7 @@
 					<a href="forces.php">
 						<div class="card">
 							<div class="button-to-page">View Topic</div>
-							<img src="../img/home-force.png" class="img-responsive">
+							<img src="img/home-force.png" class="img-responsive">
 							<div class="caption text-center">
 								<h4>Forces</h4>
 								<div class="line-divider"></div>
@@ -177,7 +177,7 @@
 					<a href="gravitationalForces.php">
 						<div class="card">
 							<div class="button-to-page">View Topic</div>
-							<img src="../img/home-angle-force.png" class="img-responsive">
+							<img src="img/home-angle-force.png" class="img-responsive">
 							<div class="caption text-center">
 								<h4>Gravity Forces</h4>
 								<div class="line-divider"></div>
@@ -226,15 +226,18 @@
 				?>
 				<input type="submit" name="submit" value="Submit" id="contact-submit-btn"/>
 			</form>
+			<div id="credits-section">
+				<div class="credits-inner text-center">Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+			</div>
 		</div>
+
+		<footer>
+			&copy; 2018: phycalc.com
+		</footer>
 
 		<!-- Go back to top -->
 		<div id="go-up-container">
 			<button type="button" id="go-up-btn"><span class="glyphicon glyphicon-chevron-up"></span></button>
-		</div>
-
-		<div id="credits-section">
-			<div class="credits-inner text-center">Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 		</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
