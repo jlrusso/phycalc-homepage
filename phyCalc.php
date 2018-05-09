@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>PhyCalc | Physics Calculators</title>
+	<title>Input Physics | Calc</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -13,14 +13,25 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+	<div id="pre-loader">
+		<h3>Input Physics</h3>
+		<div id="load-spinner"></div>
+		<div id="icon-wrapper">
+			<img src="/img/divide-loader.PNG" alt="Divide-icon" class="load-image"/>
+			<img src="/img/times-loader.PNG" alt="Times-icon" class="load-image"/>
+			<img src="/img/minus-loader.PNG" alt="Minus-icon" class="load-image"/>
+			<img src="/img/add-loader.PNG" alt="Add-icon" class="load-image"/>
+		</div>
+	</div>
 	<?php
 		include_once "navSearch.php";
 	 ?>
 
 		<div class="banner">
+			<div id="banner-overlay"></div>
 			<div id="banner-inner">
-				<p id="banner-heading">Calculate Solutions for Physics Problems</p>
-				<span id="get-started-btn">Get Started</span>
+				<p id="banner-heading">Get Physics Solutions</p>
+				<span id="get-started-btn">Start</span>
 			</div>
 		</div>
 
@@ -29,19 +40,19 @@
 				<div class="col-md-4">
 					<img src="img/search-icon.png" alt="Search Icon"/>
 					<div class="hiw-caption">
-						<p>Search our database by topic or topic-related terms</p>
+						<p>Search our database by topic or topic-related terms to find more information, useful equations, and illustrations.</p>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<img src="img/review-icon.png" alt="Review Icon"/>
 					<div class="hiw-caption">
-						<p>Review practice problems and step by step solutions</p>
+						<p>Each page lets you review practice problems for a given topic and view detailed, step by step solutions for each one.</p>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<img src="img/solution-icon.png" alt="Solution Icon"/>
 					<div class="hiw-caption">
-						<p>Solve your own problems by inputing given variables</p>
+						<p>Solve custom problems by viewing associated page that covers your problem and inputing your own custom values.</p>
 					</div>
 				</div>
 			</div>
@@ -53,7 +64,7 @@
 			</div>
 			<div class="row card-row">
 				<div class="col-md-3">
-					<a href="displacement.php">
+					<a href="/displacement">
 						<div class="card" href="displacement.html">
 							<div class="button-to-page">View Topic</div>
 							<img src="img/home-displacement.png" class="responsive">
@@ -70,7 +81,7 @@
 					</a>
 				</div>
 				<div class="col-md-3">
-					<a href="vectorDisplacement.php">
+					<a href="/2d-displacement">
 						<div class="card">
 							<div class="button-to-page">View Topic</div>
 							<img src="img/2d-displacement.png" class="img-responsive">
@@ -87,7 +98,7 @@
 					</a>
 				</div>
 				<div class="col-md-3">
-					<a href="velocity.php">
+					<a href="/velocity">
 						<div class="card">
 							<div class="button-to-page">View Topic</div>
 							<img src="img/home-velocity.png" class="img-responsive">
@@ -104,7 +115,7 @@
 					</a>
 				</div>
 				<div class="col-md-3">
-					<a href="acceleration.php">
+					<a href="/acceleration">
 						<div class="card">
 							<div class="button-to-page">View Topic</div>
 							<img src="img/home-acceleration.png" class="img-responsive">
@@ -123,7 +134,7 @@
 			</div>
 			<div class="row card-row">
 				<div class="col-md-3">
-					<a href="kinematics.php">
+					<a href="/kinematics">
 						<div class="card">
 							<div class="button-to-page">View Topic</div>
 							<img src="img/home-motion-2d.png" class="img-responsive">
@@ -140,7 +151,7 @@
 					</a>
 				</div>
 				<div class="col-md-3">
-					<a href="circularMotion.php">
+					<a href="/circular-motion">
 						<div class="card">
 							<div class="button-to-page">View Topic</div>
 							<img src="img/home-circular.png" class="img-responsive">
@@ -157,7 +168,7 @@
 					</a>
 				</div>
 				<div class="col-md-3">
-					<a href="forces.php">
+					<a href="/forces">
 						<div class="card">
 							<div class="button-to-page">View Topic</div>
 							<img src="img/home-force.png" class="img-responsive">
@@ -174,7 +185,7 @@
 					</a>
 				</div>
 				<div class="col-md-3">
-					<a href="gravitationalForces.php">
+					<a href="/gravitational-forces">
 						<div class="card">
 							<div class="button-to-page">View Topic</div>
 							<img src="img/home-angle-force.png" class="img-responsive">
@@ -224,7 +235,7 @@
 						echo "<textarea name='message' rows='8' cols='8' placeholder='Message' maxlength='500'></textarea>";
 					}
 				?>
-				<input type="submit" name="submit" value="Submit" id="contact-submit-btn"/>
+				<input type="submit" name="submit" value="Send" id="contact-submit-btn"/>
 			</form>
 			<div id="credits-section">
 				<div class="credits-inner text-center">Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
@@ -232,7 +243,7 @@
 		</div>
 
 		<footer>
-			&copy; 2018: phycalc.com
+			<div>&copy; 2018 &nbsp; inputphysics.com</div>
 		</footer>
 
 		<!-- Go back to top -->
