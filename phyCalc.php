@@ -13,29 +13,60 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div id="pre-loader">
+	<!-- <div id="pre-loader">
 		<h3>Input Physics</h3>
 		<div id="load-spinner"></div>
 		<div id="icon-wrapper">
-			<img src="/img/divide-loader.PNG" alt="Divide-icon" class="load-image"/>
-			<img src="/img/times-loader.PNG" alt="Times-icon" class="load-image"/>
-			<img src="/img/minus-loader.PNG" alt="Minus-icon" class="load-image"/>
-			<img src="/img/add-loader.PNG" alt="Add-icon" class="load-image"/>
+			<img src="../phyCalc/img/divide-loader.png" alt="Divide-icon" class="load-image"/>
+			<img src="../phyCalc/img/times-loader.png" alt="Times-icon" class="load-image"/>
+			<img src="../phyCalc/img/minus-loader.png" alt="Minus-icon" class="load-image"/>
+			<img src="../phyCalc/img/add-loader.png" alt="Add-icon" class="load-image"/>
 		</div>
-	</div>
+	</div> -->
 	<?php
-		include_once "navSearch.php";
-	 ?>
+	echo "
+	  <nav class='clearfix'>
+	    <div class='nav-logo animated fadeInRight'><a href='/home'>Input Physics</a></div>
+	    <div class='navigation animated fadeInLeft'>
+	      <ul class='horizontal-nav'>
+	        <li><a id='calculator-btn'>Calculator</a></li>
+	        <li><a id='conversion-btn'>Conversions</a></li>
+					<li><a id='contact-btn'>Contact</a></li>
+	      </ul>
+	      <div class='animated fadeInLeft' id='icon'>
+	        <div id='click-box'></div>
+	        <span id='hamburger-menu'></span>
+	        <div id='vertical-nav' class='vertical-nav'>
+	          <ul>
+	            <li><a href='#' id='vert-contact-btn'>Contact</a></li>
+	            <li><a href='#' id='vert-calculator-btn'>Calculator</a></li>
+	            <li><a href='#' id='vert-conversion-btn'>Conversions</a></li>
+	          </ul>
+	        </div>
+	      </div>
+	    </div>
+	  </nav>
+	";
+	?>
 
-		<div class="banner">
+
+		<section class="banner">
 			<div id="banner-overlay"></div>
 			<div id="banner-inner">
-				<p id="banner-heading">Get Physics Solutions</p>
-				<span id="get-started-btn">Start</span>
+				<p id="banner-heading">Simplify your Physics Problems</p>
+				<div id='search-wrapper'>
+		      <input type='text' id='search-bar' placeholder='Search by topic..'/>
+		      <div id='search-icon'><i class='glyphicon glyphicon-search'></i></div>
+					<?php
+						include_once "search-cases.php";
+					?>
+		    </div>
+				<h2>or</h2>
+				<div id="get-started-btn">View Modules</div>
 			</div>
-		</div>
+		</section>
 
-		<div class="how-it-works-section">
+		<section class="how-it-works-section">
 			<div class="row text-center">
 				<div class="col-md-4">
 					<img src="img/search-icon.png" alt="Search Icon"/>
@@ -56,7 +87,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 
 		<div id="main-content">
 			<div id="features-heading-container">
