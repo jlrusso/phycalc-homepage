@@ -1,11 +1,10 @@
-$(window).on('beforeunload', function() {
-	 $(window).scrollTop(0);
-});
-
+window.onbeforeunload = function () {
+	window.scrollTo(0, 0);
+}
 $(document).ready(function(){
 	$("#get-started-btn").click(function() {
     $('html,body').animate({
-        scrollTop: $("#featured-topic-heading").offset().top - 10
+        scrollTop: $("#featured-topic-heading").offset().top - 60
     }, 'slow');
 	});
 
@@ -23,25 +22,25 @@ $(document).ready(function(){
 
 	$("#calculator-btn").click(function(){
 		$("html, body").animate({
-			scrollTop: $("#calculator-container").offset().top - 30
+			scrollTop: $("#calculator-container").offset().top - 60
 		}, "slow");
 	})
 
 	$("#vert-calculator-btn").click(function(){
 		$("html, body").animate({
-			scrollTop: $("#calculator-container").offset().top - 30
+			scrollTop: $("#calculator-container").offset().top - 60
 		}, "slow");
 	})
 
 	$("#conversion-btn").click(function(){
 		$('html, body').animate({
-			scrollTop: $("#conversion-section").offset().top
+			scrollTop: $("#conversion-container").offset().top - 60
 		}, 'slow')
 	})
 
 	$("#vert-conversion-btn").click(function(){
 		$("html, body").animate({
-			scrollTop: $("#conversion-container").offset().top
+			scrollTop: $("#conversion-container").offset().top - 60
 		}, "slow")
 	})
 
@@ -61,9 +60,33 @@ $(document).ready(function(){
 
 });
 
+// window.onload = function(){
+// 	var preLoader = document.getElementById("pre-loader");
+// 			imageOne = document.getElementsByClassName("load-image")[3];
+// 			imageTwo = document.getElementsByClassName("load-image")[2];
+// 			imageThree = document.getElementsByClassName("load-image")[1];
+// 			imageFour = document.getElementsByClassName("load-image")[0];
+// 	setTimeout(() =>{
+// 		imageOne.classList.add("rotate-y");
+// 	}, 400);
+// 	setTimeout(() =>{
+// 		imageTwo.classList.add("rotate-x");
+// 	}, 800);
+// 	setTimeout(() =>{
+// 		imageThree.classList.add("rotate-y");
+// 	}, 1200);
+// 	setTimeout(() =>{
+// 		imageFour.classList.add("rotate-x");
+// 	}, 1600);
+// 	setTimeout(() => {
+// 		preLoader.style.top = "-100vh";
+// 	}, 2000);
+// 	setTimeout(() => {
+// 		preLoader.style.display = "none";
+// 	}, 2500);
+// }
+
 var navBar = document.getElementsByTagName("nav")[0],
-		horizontalSearchBtn = document.getElementById("horizontal-search-btn"),
-		verticalSearchBtn = document.getElementById("vertical-search-btn"),
 		searchSection  = document.getElementById("search-section"),
 		searchBar = document.getElementById("search-bar"),
 		closeSearchBtn = document.getElementById("close-search-btn"),
@@ -72,29 +95,8 @@ var navBar = document.getElementsByTagName("nav")[0],
 		hiwSection = document.getElementsByClassName("how-it-works-section")[0],
 		mainContent = document.getElementById("main-content");
 
-horizontalSearchBtn.addEventListener("click", openSearchContainer);
-verticalSearchBtn.addEventListener("click", openSearchContainer);
 searchBar.addEventListener("input", showList);
-closeSearchBtn.addEventListener("click", closeSearchContainer);
 
-function openSearchContainer(){
-	if(!searchSection.classList.contains("active-search")){
-		searchSection.classList.toggle("active-search");
-		searchBar.focus();
-	} else {
-		searchSection.classList.remove("active-search");
-		caseList.classList.remove("show");
-		searchBar.value = "";
-	}
-}
-
-function closeSearchContainer(){
-	if(searchSection.classList.contains("active-search")){
-		searchSection.classList.remove("active-search");
-		caseList.classList.remove("show");
-		searchBar.value  = "";
-	}
-}
 function showList() {
 	if (searchBar.value.length > 0){
 		caseList.classList.add('show');
@@ -104,26 +106,26 @@ function showList() {
 	}
 }
 function showAnchors(){
-	let inputValue = searchBar.value.toUpperCase();
-	let anchors = caseList.getElementsByTagName('a');
-	let newAnchors = document.createElement("a");
-	for (var i = 0; i < anchors.length; i++){
-		let a = anchors[i];
+	var inputValue = searchBar.value.toUpperCase(),
+	 		anchors = caseList.getElementsByTagName('a'),
+	 		anchorsLength = anchors.length,
+			anchorCounter;
+	for (var anchorCounter = 0; anchorCounter < anchorsLength; anchorCounter++){
+		let a = anchors[anchorCounter];
 		if (a.textContent.toUpperCase().indexOf(inputValue) > -1){
-			anchors[i].style.display = "";
+			anchors[anchorCounter].style.display = "";
 		} else {
-			anchors[i].style.display = "none";
+			anchors[anchorCounter].style.display = "none";
 		}
 	}
 }
 
-var searchClosers = [searchSection, banner, hiwSection, mainContent];
-for(let i = 0; i < searchClosers.length; i++){
-	searchClosers[i].addEventListener("click", function(e){
+document.onclick = (e) => {
+	if(caseList.classList.contains("show")){
 		if(!e.target.matches("#search-bar")){
-			closeSearchContainer();
+			caseList.classList.remove("show");
 		}
-	})
+	}
 }
 
 /*--- Toggle Hamburger Menu ---*/
