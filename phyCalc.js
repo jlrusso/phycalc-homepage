@@ -2,7 +2,7 @@ window.onbeforeunload = function () {
 	window.scrollTo(0, 0);
 }
 $(document).ready(function(){
-	$("#get-started-btn").click(function() {
+	$("#view-btn").click(function() {
     $('html,body').animate({
         scrollTop: $("#featured-topic-heading").offset().top - 60
     }, 'slow');
@@ -60,31 +60,32 @@ $(document).ready(function(){
 
 });
 
-// window.onload = function(){
-// 	var preLoader = document.getElementById("pre-loader");
-// 			imageOne = document.getElementsByClassName("load-image")[3];
-// 			imageTwo = document.getElementsByClassName("load-image")[2];
-// 			imageThree = document.getElementsByClassName("load-image")[1];
-// 			imageFour = document.getElementsByClassName("load-image")[0];
-// 	setTimeout(() =>{
-// 		imageOne.classList.add("rotate-y");
-// 	}, 400);
-// 	setTimeout(() =>{
-// 		imageTwo.classList.add("rotate-x");
-// 	}, 800);
-// 	setTimeout(() =>{
-// 		imageThree.classList.add("rotate-y");
-// 	}, 1200);
-// 	setTimeout(() =>{
-// 		imageFour.classList.add("rotate-x");
-// 	}, 1600);
-// 	setTimeout(() => {
-// 		preLoader.style.top = "-100vh";
-// 	}, 2000);
-// 	setTimeout(() => {
-// 		preLoader.style.display = "none";
-// 	}, 2500);
-// }
+
+window.onload = function(){
+	var preLoader = document.getElementById("pre-loader");
+			imageOne = document.getElementsByClassName("load-image")[3];
+			imageTwo = document.getElementsByClassName("load-image")[2];
+			imageThree = document.getElementsByClassName("load-image")[1];
+			imageFour = document.getElementsByClassName("load-image")[0];
+	setTimeout(() =>{
+		imageOne.classList.add("rotate-y");
+	}, 400);
+	setTimeout(() =>{
+		imageTwo.classList.add("rotate-x");
+	}, 800);
+	setTimeout(() =>{
+		imageThree.classList.add("rotate-y");
+	}, 1200);
+	setTimeout(() =>{
+		imageFour.classList.add("rotate-x");
+	}, 1600);
+	setTimeout(() => {
+		preLoader.style.top = "-100vh";
+	}, 2000);
+	setTimeout(() => {
+		preLoader.style.display = "none";
+	}, 2500);
+}
 
 var navBar = document.getElementsByTagName("nav")[0],
 		searchSection  = document.getElementById("search-section"),
@@ -92,7 +93,7 @@ var navBar = document.getElementsByTagName("nav")[0],
 		closeSearchBtn = document.getElementById("close-search-btn"),
 		caseList = document.getElementById("search-case-list"),
 		banner = document.getElementsByClassName("banner")[0],
-		hiwSection = document.getElementsByClassName("how-it-works-section")[0],
+		hiwSection = document.getElementsByClassName("hiw-section")[0],
 		mainContent = document.getElementById("main-content");
 
 searchBar.addEventListener("input", showList);
