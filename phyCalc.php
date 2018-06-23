@@ -13,7 +13,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<!-- <div id="pre-loader">
+	<div id="pre-loader">
 		<h3>Input Physics</h3>
 		<div id="load-spinner"></div>
 		<div id="icon-wrapper">
@@ -22,7 +22,8 @@
 			<img src="../phyCalc/img/minus-loader.png" alt="Minus-icon" class="load-image"/>
 			<img src="../phyCalc/img/add-loader.png" alt="Add-icon" class="load-image"/>
 		</div>
-	</div> -->
+	</div>
+
 	<?php
 	echo "
 	  <nav class='clearfix'>
@@ -38,9 +39,9 @@
 	        <span id='hamburger-menu'></span>
 	        <div id='vertical-nav' class='vertical-nav'>
 	          <ul>
-	            <li><a href='#' id='vert-contact-btn'>Contact</a></li>
-	            <li><a href='#' id='vert-calculator-btn'>Calculator</a></li>
-	            <li><a href='#' id='vert-conversion-btn'>Conversions</a></li>
+	            <li><a id='vert-contact-btn'>Contact</a></li>
+	            <li><a id='vert-calculator-btn'>Calculator</a></li>
+	            <li><a id='vert-conversion-btn'>Conversions</a></li>
 	          </ul>
 	        </div>
 	      </div>
@@ -62,28 +63,28 @@
 					?>
 		    </div>
 				<h2>or</h2>
-				<div id="get-started-btn">View Modules</div>
+				<div id="view-btn">View Topics</div>
 			</div>
 		</section>
 
-		<section class="how-it-works-section">
+		<section class="hiw-section">
 			<div class="row text-center">
 				<div class="col-md-4">
 					<img src="img/search-icon.png" alt="Search Icon"/>
 					<div class="hiw-caption">
-						<p>Search our database by topic or topic-related terms to find more information, useful equations, and illustrations.</p>
+						<p>Search our database by topic or topic-related terms for relevant information, useful equations, and illustrations.</p>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<img src="img/review-icon.png" alt="Review Icon"/>
 					<div class="hiw-caption">
-						<p>Each page lets you review practice problems for a given topic and view detailed, step by step solutions for each one.</p>
+						<p>Each page covers practice problems for a given topic and includes detailed, step by step solutions for each one.</p>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<img src="img/solution-icon.png" alt="Solution Icon"/>
 					<div class="hiw-caption">
-						<p>Solve custom problems by viewing associated page that covers your problem and inputing your own custom values.</p>
+						<p>Solve your own practice problems by going to the relevant topic page and inputing any values that are available</p>
 					</div>
 				</div>
 			</div>
@@ -95,8 +96,8 @@
 			</div>
 			<div class="row card-row">
 				<div class="col-md-3">
-					<a href="/displacement">
-						<div class="card" href="displacement.html">
+					<a href="displacement.php">
+						<div class="card">
 							<div class="button-to-page">View Topic</div>
 							<img src="img/home-displacement.png" class="responsive">
 							<div class="caption">
@@ -112,7 +113,7 @@
 					</a>
 				</div>
 				<div class="col-md-3">
-					<a href="/2d-displacement">
+					<a href="vectorDisplacement.php">
 						<div class="card">
 							<div class="button-to-page">View Topic</div>
 							<img src="img/2d-displacement.png" class="img-responsive">
@@ -129,7 +130,7 @@
 					</a>
 				</div>
 				<div class="col-md-3">
-					<a href="/velocity">
+					<a href="velocity.php">
 						<div class="card">
 							<div class="button-to-page">View Topic</div>
 							<img src="img/home-velocity.png" class="img-responsive">
@@ -146,7 +147,7 @@
 					</a>
 				</div>
 				<div class="col-md-3">
-					<a href="/acceleration">
+					<a href="acceleration.php">
 						<div class="card">
 							<div class="button-to-page">View Topic</div>
 							<img src="img/home-acceleration.png" class="img-responsive">
@@ -165,7 +166,7 @@
 			</div>
 			<div class="row card-row">
 				<div class="col-md-3">
-					<a href="/kinematics">
+					<a href="kinematics.php">
 						<div class="card">
 							<div class="button-to-page">View Topic</div>
 							<img src="img/home-motion-2d.png" class="img-responsive">
@@ -182,7 +183,7 @@
 					</a>
 				</div>
 				<div class="col-md-3">
-					<a href="/circular-motion">
+					<a href="circularMotion.php">
 						<div class="card">
 							<div class="button-to-page">View Topic</div>
 							<img src="img/home-circular.png" class="img-responsive">
@@ -199,7 +200,7 @@
 					</a>
 				</div>
 				<div class="col-md-3">
-					<a href="/forces">
+					<a href="forces.php">
 						<div class="card">
 							<div class="button-to-page">View Topic</div>
 							<img src="img/home-force.png" class="img-responsive">
@@ -216,7 +217,7 @@
 					</a>
 				</div>
 				<div class="col-md-3">
-					<a href="/gravitational-forces">
+					<a href="gravitationalForces.php">
 						<div class="card">
 							<div class="button-to-page">View Topic</div>
 							<img src="img/home-angle-force.png" class="img-responsive">
@@ -274,7 +275,7 @@
 		</div>
 
 		<footer>
-			<div>&copy; 2018 &nbsp; inputphysics.com</div>
+			<div>&copy; 2018 &nbsp; Input Physics</div>
 		</footer>
 
 		<!-- Go back to top -->
