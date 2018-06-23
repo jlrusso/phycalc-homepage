@@ -835,7 +835,7 @@ nav {
 	color: var(--main-yellow-color);
 }
 #contact-submit-btn {
-	width: 100%;
+	width: 50% !important;
   border: 2px solid var(--main-black-color);
 	border-radius: 4px;
 	-webkit-border-radius: 4px;
