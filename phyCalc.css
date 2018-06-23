@@ -405,14 +405,14 @@ nav {
 /*--- Banner ---*/
 .banner {
 	width:100%;
-	height: 100vh;
+	height: 55vh;
 	position: relative;
 	background: url("img/banner-image.jpeg");
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	background-position: center;
+	background-position: bottom;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
@@ -430,7 +430,7 @@ nav {
 	width: 90%;
 	height: auto;
 	position: absolute;
-	top: 45%;
+	top: 55%;
 	left: 50%;
 	transform: translate(-50%,-50%);
 	-webkit-transform: translate(-50%,-50%);
@@ -499,10 +499,12 @@ nav {
 	top: 95%;
 	left: 0;
 	width: 100%;
-	height: 230px;
+	height: auto;
+	max-height: 180px;
 	padding: 10px;
 	overflow-y: auto;
  	background-color: var(--main-black-color);
+	border-radius: 0 0 3px 3px;
 }
 #search-case-list::-webkit-scrollbar {
 	display: block;
@@ -538,7 +540,7 @@ nav {
 	text-align: center;
 	margin-bottom: 20px;
 }
-#get-started-btn {
+#view-btn {
 	width: 200px;
 	margin: auto;
 	border: 2px solid var(--main-black-color);
@@ -554,7 +556,32 @@ nav {
 	cursor: pointer;
 	margin: auto;
 }
-
+/*--- How It Works Section ---*/
+.hiw-section {
+	width:100%;
+	height: 45vh;
+	position: relative;
+	padding: 85px;
+	background-color: var(--main-black-color);
+	color: white;
+}
+.hiw-section > div {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 80%;
+}
+.hiw-caption {
+	font-size: 1.5rem;
+}
+.col-md-4 img {
+	margin-bottom: 25px;
+}
+.col-sm-4 p {
+	width: 100%;
+	margin-bottom: 15px;
+}
 /*-- Start of Main Content --*/
 #main-content {
 	padding:50px 60px;
@@ -691,30 +718,18 @@ nav {
 	-moz-animation-timing-function: linear;
 	-o-animation-timing-function: linear;
 }
-@keyframes lineDividePulse,
+@keyframes lineDividePulse {
+	0% {width:80%;}
+	50% {width: 0%;}
+	100% {width: 80%;}
+}
+
 @-webkit-keyframes lineDividePulse {
 	0% {width:80%;}
 	50% {width: 0%;}
 	100% {width: 80%;}
 }
-/*--- How It Works Section ---*/
-.how-it-works-section {
-	width:100%;
-	height: auto;
-	padding: 85px;
-	background-color: var(--main-black-color);
-	color: white;
-}
-.hiw-caption {
-	font-size: 1.5rem;
-}
-.col-md-4 img {
-	margin-bottom: 25px;
-}
-.col-sm-4 p {
-	width: 100%;
-	margin-bottom: 15px;
-}
+
 /*--- Start of Conversion Section ---*/
 #conversion-outer {
 	padding: 20px 30px 20px;
@@ -788,11 +803,7 @@ nav {
 	width:100%;
 	height:auto;
 	position: relative;
-	background: url("img/new-yellow.png");
-	background-size: cover;
-	background-position: center 100px;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
+	background-color: var(--main-yellow-color);
 	padding:0 50px 50px;
 	text-align: center;
 }
@@ -1101,10 +1112,21 @@ footer {
 	}
 }
 @media screen and (max-width: 992px){
-	.how-it-works-section .col-md-4:not(:last-child) {
+	.hiw-section {
+		height: auto;
+	}
+	.hiw-section > div {
+		position: relative;
+		top: 0;
+		left: 0;
+		transform: none;
+		width: 65%;
+		margin: auto;
+	}
+	.hiw-section .col-md-4:not(:last-child) {
 		margin-bottom: 40px;
 	}
-	.how-it-works-section .hiw-caption {
+	.hiw-section .hiw-caption {
 		padding: 20px 0 0;
 	}
 	#features-heading-container {
@@ -1172,6 +1194,9 @@ footer {
 	}
 }
 @media screen and (max-width: 650px){
+	.hiw-section > div {
+		width: 85%;
+	}
 	#icon {
 		display: block;
 	}
@@ -1194,8 +1219,18 @@ footer {
 	}
 }
 @media screen and (max-width: 600px){
+	.banner {
+		height: 100vh;
+	}
+	#banner-inner {
+		top: 50%;
+	}
 	#banner-heading {
 		padding: 0 15px;
+	}
+	#search-case-list {
+		height: auto;
+		max-height: 235px;
 	}
 	.col-md-3 {
 		width: 95%;
@@ -1225,7 +1260,7 @@ footer {
 	}
 }
 @media screen and (max-width: 500px){
-	.how-it-works-section {
+	.hiw-section {
 		padding: 40px 20px;
 	}
 	.card h4 {
@@ -1286,7 +1321,7 @@ footer {
 	}
 }
 @media screen and (max-width: 400px){
-	#how-it-works-section {
+	#hiw-section {
 		width: 95%;
 	}
 	.col-md-3 {
@@ -1321,7 +1356,7 @@ footer {
 
 @media screen and (max-width: 300px){
 
-	.how-it-works-section {
+	.hiw-section {
 		padding: 40px 0;
 	}
 	.col-sm-4 {
