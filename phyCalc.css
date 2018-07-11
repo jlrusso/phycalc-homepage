@@ -234,6 +234,7 @@ nav {
 }
 .vertical-nav {
 	display: none;
+	box-shadow: 0 0 10px var(--main-yellow-color);
 }
 .vertical-nav li a {
 	display: block;
@@ -283,7 +284,7 @@ nav {
 	-moz-transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
 	-o-transform: translate(-50%, -50%);
-	width: 40px;
+	width: 30px;
 	height: 4px;
 	background-color: var(--main-yellow-color);
 	border-radius: 10px;
@@ -294,7 +295,7 @@ nav {
 #hamburger-menu:after {
 	content: "";
 	position: absolute;
-	width: 40px;
+	width: 30px;
 	height: 4px;
 	background-color: var(--main-yellow-color);
 	border-radius: 10px;
