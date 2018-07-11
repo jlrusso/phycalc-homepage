@@ -34,7 +34,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--main-yellow-color);
 }
-ul {
+ul, li {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -798,8 +798,8 @@ nav {
 	font-weight: bold;
   outline: none;
 }
-/*--- Start of Contact form ---*/
-#contact-container {
+/*--- Start of Suggestions form ---*/
+#suggestions-container {
 	width:100%;
 	height:auto;
 	position: relative;
@@ -807,56 +807,72 @@ nav {
 	padding:0 50px 50px;
 	text-align: center;
 }
-#contact-container h2 {
+#suggestions-container h2 {
   margin: 0 auto 10px;
   text-align: center;
   padding: 20px 0 10px;
 	font-weight: bold;
 }
-#contact-container form {
-  width: 500px;
-	max-width: 500px;
-	height: 100%;
-  margin: auto;
-}
-#contact-container input:not(#contact-submit-btn),
-#contact-container textarea {
-  width: 100%;
-  padding: 9px;
-  border: 1px solid rgba(0,0,0,0.3);
-  border-radius: 4px;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-}
-#contact-container input:not(#contact-submit-btn),
-#contact-container textarea {
-  margin-bottom: 10px;
-  background-color: rgba(33, 47, 61, 0.9);
+.dropdown-btn {
+	width: 500px;
+	max-width: 90%;
+	padding: 20px;
+	background-color: var(--main-black-color);
 	color: var(--main-yellow-color);
+	font-weight: bold;
+	text-align: center;
+	border-radius: 4px 4px 0 0;
+	transition: 0.4s;
+	margin: auto;
 }
-#contact-submit-btn {
-	width: 50% !important;
-  border: 2px solid var(--main-black-color);
+#suggestions-container form {
+	width: 500px;
+	max-width: 90%;
+	margin: auto;
+}
+#suggestions-container select {
+	width: 100%;
+	height: 50px;
+	border: 2px solid var(--main-black-color);
+	border-radius: 0 0 4px 4px;
+	background: transparent;
+	font-weight: bold;
+}
+#suggestions-container select:focus {
+	outline: none;
+}
+#suggestions-container option {
+	background-color: transparent;
+	color: var(--main-black-color);
+	font-weight: bold;
+	text-align: center;
+}
+#suggestions-container label {
+	display: block;
+	padding: 15px;
+	width: 100%;
+	margin: auto;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.toggle-label {
+	background: var(--main-black-color) !important;
+	color: var(--main-yellow-color) !important;
+}
+#suggestions-container li:not(:last-child){
+	border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+#suggestions-container [type='submit'] {
+	display: block;
+	width: 100px;
+	margin: 10px auto;
+	border: none;
 	border-radius: 4px;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-  background-color: transparent;
-  padding: 10px;
-	font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--main-black-color);
-  cursor: pointer;
-  transition: 0.2s;
-	-webkit-transition: 0.2s;
-	-moz-transition: 0.2s;
-	-o-transition: 0.2s;
-}
-#contact-submit-btn:hover {
-  background-color: var(--main-yellow-color);
-  color: var(--main-black-color) !important;
-}
-#contact-username {
-  display: none;
+	background: var(--main-black-color);
+	padding: 15px;
+	font-weight: bold;
+	color: var(--main-yellow-color);
+	transition: 0.4s;
 }
 /*--- Credits Section ---*/
 #credits-section {
@@ -1073,6 +1089,11 @@ footer {
 #go-up-container button:focus {
 	outline: none;
 }
+#new-content-form {
+	border: 1px solid red;
+	height: 400px;
+	overflow-y: auto;
+}
 /*--- Media Queries ---*/
 @media screen and (max-width: 1300px){
 	.card {
@@ -1161,9 +1182,6 @@ footer {
 	}
 }
 @media screen and (max-width: 800px){
-	#contact-container form {
-		width: 80%;
-	}
 	#search-case-list {
 		width: 100%;
 		left: 0;
@@ -1308,10 +1326,10 @@ footer {
 	#sig-fig-field {
 		height: 35px;
 	}
-	#contact-container {
+	#suggestions-container {
 		padding: 0px 10px 50px;
 	}
-	#contact-container form {
+	#suggestions-container form {
 		width: 95%;
 		margin: auto;
 	}
@@ -1343,14 +1361,8 @@ footer {
 	#sig-fig-field {
 		font-size: 1.4rem;
 	}
-	#contact-container {
+	#suggestions-container {
 		background-position: center;
-	}
-	#contact-submit-btn {
-		color: var(--main-black-color);
-	}
-	#contact-submit-btn:focus {
-		color: var(--main-black-color);
 	}
 }
 
@@ -1380,6 +1392,6 @@ footer {
 		height: 100px;
 	}
 	.button-to-page {
-		1.2rem;
+		font-size: 1.2rem;
 	}
 }
