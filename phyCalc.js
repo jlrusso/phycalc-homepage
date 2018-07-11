@@ -10,7 +10,7 @@ $(document).ready(function(){
 
 	$("#topics-btn").add("#vert-topics-btn").click(() => {
 		$("html, body").animate({
-			scrollTop: $("#main-content").offset().top - 25
+			scrollTop: $("#featured-topic-heading").offset().top - 60
 		});
 	});
 
