@@ -6,14 +6,15 @@
 	<title>Input Physics | Calc</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
 	<link rel="stylesheet" href="phyCalc.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div id="pre-loader">
+	<!-- <div id="pre-loader">
 		<h3>Input Physics</h3>
 		<div id="load-spinner"></div>
 		<div id="icon-wrapper">
@@ -22,26 +23,28 @@
 			<img src="../phyCalc/img/minus-loader.png" alt="Minus-icon" class="load-image"/>
 			<img src="../phyCalc/img/add-loader.png" alt="Add-icon" class="load-image"/>
 		</div>
-	</div>
+	</div> -->
 
 	<?php
 	echo "
 	  <nav class='clearfix'>
 	    <div class='nav-logo animated fadeInRight'><a href='/home'>Input Physics</a></div>
 	    <div class='navigation animated fadeInLeft'>
-	      <ul class='horizontal-nav'>
-	        <li><a id='calculator-btn'>Calculator</a></li>
-	        <li><a id='conversion-btn'>Conversions</a></li>
-					<li><a id='contact-btn'>Contact</a></li>
+				<ul class='horizontal-nav'>
+					<li><a id='topics-btn'>Topics</a></li>
+					<li><a id='conversion-btn'>Conversions</a></li>
+	        <li><a id='calculator-btn'>Calculator</a></li>	        
+					<li><a id='suggestions-btn'>Suggestions</a></li>
 	      </ul>
 	      <div class='animated fadeInLeft' id='icon'>
 	        <div id='click-box'></div>
 	        <span id='hamburger-menu'></span>
 	        <div id='vertical-nav' class='vertical-nav'>
-	          <ul>
-	            <li><a id='vert-contact-btn'>Contact</a></li>
-	            <li><a id='vert-calculator-btn'>Calculator</a></li>
-	            <li><a id='vert-conversion-btn'>Conversions</a></li>
+	          <ul>	            
+	            <li><a id='vert-topics-btn'>Topics</a></li>
+							<li><a id='vert-conversion-btn'>Conversions</a></li>
+							<li><a id='vert-calculator-btn'>Calculator</a></li>
+							<li><a id='vert-suggestions-btn'>Suggestions</a></li>							
 	          </ul>
 	        </div>
 	      </div>
@@ -245,29 +248,28 @@
 		?>
 
 
-		<div id="contact-container">
-			<h2>Get in Touch</h2>
-			<form action="includes/contact.php" method="POST">
-				<?php
-					if(isset($_GET['fullname'])){
-						echo "<input type='text' name='fullname' placeholder='Full name' value='" . $_GET['fullname'] . "' maxlength='30' required='required'/>";
-						echo "<input type='email' name='email' placeholder='Email' required='required'/>";
-					} else {
-						echo "<input type='text' name='fullname' placeholder='Full name' maxlength='30' required='required'/>";
-						echo "<input type='email' name='email' placeholder='Email' required='required'/>";
-					}
-					if(isset($_GET['subject'])){
-						echo "<input type='text' name='subject' placeholder='Subject' maxlength='30' value='" . $_GET['subject'] . "'/>";
-					} else {
-						echo "<input type='text' name='subject' placeholder='Subject' maxlength='30'/>";
-					}
-					if(isset($_GET['message'])){
-						echo "<textarea name='message' rows='8' cols='80' placeholder='Message' maxlength='500'>" . $_GET['message'] . "</textarea>";
-					} else {
-						echo "<textarea name='message' rows='8' cols='8' placeholder='Message' maxlength='500'></textarea>";
-					}
-				?>
-				<input type="submit" name="submit" value="Send" id="contact-submit-btn"/>
+		<div id="suggestions-container">
+		<h2>Suggest New Content</h2>
+			<p class="dropdown-btn">Physics Topics</p>
+			<form action="includes/contentSuggestion.php" method="POST">
+				<select name="topic">
+					<option>Momentum</option>
+					<option>Energy and Work</option>
+					<option>Properties of Matter</option>
+					<option>Fluids</option>
+					<option>Oscillations</option>
+					<option>Waves and Sounds</option>
+					<option>Wave Optics</option>
+					<option>Ray Optics</option>
+					<option>Electric Fields and Forces</option>
+					<option>Electric Potential</option>
+					<option>Current</option>
+					<option>Resistance</option>
+					<option>Circuits</option>
+					<option>Magnetic Fields and Forces</option>
+					<option>Electromagnetic Induction and Waves</option>
+				</select>
+				<input type="submit" name="submit" value="Submit"/>
 			</form>
 			<div id="credits-section">
 				<div class="credits-inner text-center">Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
@@ -275,7 +277,7 @@
 		</div>
 
 		<footer>
-			<div>&copy; 2018 &nbsp; Input Physics</div>
+			<p><b>&copy; Input Physics 2018</b></p>
 		</footer>
 
 		<!-- Go back to top -->
