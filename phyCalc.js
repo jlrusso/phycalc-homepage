@@ -8,41 +8,30 @@ $(document).ready(function(){
     }, 'slow');
 	});
 
-	$("#contact-btn").click(function(){
+	$("#topics-btn").add("#vert-topics-btn").click(() => {
+		$("html, body").animate({
+			scrollTop: $("#main-content").offset().top - 25
+		});
+	});
+
+	$
+	$("#suggestions-btn").add("#vert-suggestions-btn").click(function(){
 		$('html,body').animate({
-			scrollTop: $("#contact-container").offset().top
+			scrollTop: $("#suggestions-container").offset().top
 		}, 'slow')
-	})
+	});
 
-	$("#vert-contact-btn").click(function(){
-		$("html, body").animate({
-			scrollTop: $("#contact-container").offset().top
-		}, "slow")
-	})
-
-	$("#calculator-btn").click(function(){
+	$("#calculator-btn").add("#vert-calculator-btn").click(function(){
 		$("html, body").animate({
 			scrollTop: $("#calculator-container").offset().top - 60
 		}, "slow");
-	})
+	});	
 
-	$("#vert-calculator-btn").click(function(){
-		$("html, body").animate({
-			scrollTop: $("#calculator-container").offset().top - 60
-		}, "slow");
-	})
-
-	$("#conversion-btn").click(function(){
+	$("#conversion-btn").add("#vert-conversion-btn").click(function(){
 		$('html, body').animate({
 			scrollTop: $("#conversion-container").offset().top - 60
 		}, 'slow')
-	})
-
-	$("#vert-conversion-btn").click(function(){
-		$("html, body").animate({
-			scrollTop: $("#conversion-container").offset().top - 60
-		}, "slow")
-	})
+	});
 
 	$("#go-up-btn").click(function(){
 		$("html, body").animate({
@@ -61,31 +50,31 @@ $(document).ready(function(){
 });
 
 
-window.onload = function(){
-	var preLoader = document.getElementById("pre-loader");
-			imageOne = document.getElementsByClassName("load-image")[3];
-			imageTwo = document.getElementsByClassName("load-image")[2];
-			imageThree = document.getElementsByClassName("load-image")[1];
-			imageFour = document.getElementsByClassName("load-image")[0];
-	setTimeout(() =>{
-		imageOne.classList.add("rotate-y");
-	}, 400);
-	setTimeout(() =>{
-		imageTwo.classList.add("rotate-x");
-	}, 800);
-	setTimeout(() =>{
-		imageThree.classList.add("rotate-y");
-	}, 1200);
-	setTimeout(() =>{
-		imageFour.classList.add("rotate-x");
-	}, 1600);
-	setTimeout(() => {
-		preLoader.style.top = "-100vh";
-	}, 2000);
-	setTimeout(() => {
-		preLoader.style.display = "none";
-	}, 2500);
-}
+// window.onload = function(){
+// 	var preLoader = document.getElementById("pre-loader");
+// 			imageOne = document.getElementsByClassName("load-image")[3];
+// 			imageTwo = document.getElementsByClassName("load-image")[2];
+// 			imageThree = document.getElementsByClassName("load-image")[1];
+// 			imageFour = document.getElementsByClassName("load-image")[0];
+// 	setTimeout(() =>{
+// 		imageOne.classList.add("rotate-y");
+// 	}, 400);
+// 	setTimeout(() =>{
+// 		imageTwo.classList.add("rotate-x");
+// 	}, 800);
+// 	setTimeout(() =>{
+// 		imageThree.classList.add("rotate-y");
+// 	}, 1200);
+// 	setTimeout(() =>{
+// 		imageFour.classList.add("rotate-x");
+// 	}, 1600);
+// 	setTimeout(() => {
+// 		preLoader.style.top = "-100vh";
+// 	}, 2000);
+// 	setTimeout(() => {
+// 		preLoader.style.display = "none";
+// 	}, 2500);
+// }
 
 var navBar = document.getElementsByTagName("nav")[0],
 		searchSection  = document.getElementById("search-section"),
@@ -149,6 +138,9 @@ window.onclick = function(e){
 		}
 	}
 }
+
+/*--- Suggestion List ---*/
+
 
 /*--- Conversion Table JS ---*/
 var userInput = document.getElementById('unit-input-field'),
